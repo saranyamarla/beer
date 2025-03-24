@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protein Beer | High Protein Fizzy Drink for Fitness Enthusiasts</title>
+<style>
+/* Reset and Base Styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Montserrat', sans-serif;
+line-height: 1.6;
+color: #f5f5f5;
+overflow-x: hidden;
+background-color: #0a1930;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* Utility Classes */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.btn {
+display: inline-block;
+padding: 12px 30px;
+border-radius: 30px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.btn-primary {
+background: #e71d36;
+color: white;
+}
+
+.btn-primary:hover {
+background: #d10a23;
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+background: transparent;
+color: white;
+border: 2px solid white;
+}
+
+.btn-secondary:hover {
+background: rgba(255, 255, 255, 0.1);
+transform: translateY(-3px);
+}
+
+.section-title {
+font-size: 2.5rem;
+margin-bottom: 1.5rem;
+text-align: center;
+color: #fff;
+}
+
+.section-subtitle {
+font-size: 1.2rem;
+margin-bottom: 3rem;
+text-align: center;
+color: #aab8c2;
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+}
+
+section {
+padding: 80px 0;
+}
+
+/* Header Styles */
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background: rgba(10, 25, 48, 0.95);
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+z-index: 1000;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 0;
+}
+
+.logo {
+font-size: 1.8rem;
+font-weight: 800;
+color: #e71d36;
+}
+
+.logo span {
+color: #fff;
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+}
+
+.nav-links li {
+margin-left: 30px;
+}
+
+.nav-links a {
+font-weight: 600;
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: #e71d36;
+}
+
+/* Hero Section */
+.hero {
+height: 100vh;
+background: linear-gradient(135deg, rgba(10, 25, 48, 0.9), rgba(10, 25, 48, 0.7)), url('https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg') center/cover no-repeat;
+display: flex;
+align-items: center;
+text-align: center;
+margin-top: 0;
+padding-top: 60px;
+}
+
+.hero-content {
+max-width: 800px;
+margin: 0 auto;
+}
+
+.hero h1 {
+font-size: 3.5rem;
+line-height: 1.2;
+margin-bottom: 25px;
+color: #fff;
+}
+
+.hero p {
+font-size: 1.3rem;
+margin-bottom: 40px;
+color: #aab8c2;
+}
+
+.hero-btns {
+display: flex;
+gap: 20px;
+justify-content: center;
+}
+
+.product-image {
+margin-top: 40px;
+max-width: 300px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* About Section */
+.about {
+background: #0d2241;
+}
+
+.about-content {
+display: flex;
+align-items: center;
+gap: 60px;
+}
+
+.about-text {
+flex: 1;
+}
+
+.about-image {
+flex: 1;
+text-align: center;
+}
+
+.about-image img {
+max-width: 100%;
+border-radius: 10px;
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features {
+background: #0a1930;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 40px;
+margin-top: 60px;
+}
+
+.feature-card {
+background: #0d2241;
+padding: 40px 30px;
+border-radius: 15px;
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+font-size: 3rem;
+margin-bottom: 20px;
+color: #e71d36;
+}
+
+.feature-card h3 {
+font-size: 1.5rem;
+margin-bottom: 15px;
+color: #fff;
+}
+
+/* Contact Section */
+.contact {
+background: #0d2241;
+}
+
+.contact-container {
+display: flex;
+gap: 60px;
+}
+
+.contact-form {
+flex: 1;
+background: #0a1930;
+padding: 40px;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+}
+
+.form-control {
+width: 100%;
+padding: 12px 15px;
+border: 1px solid #2a3b59;
+background: #0a1930;
+color: #fff;
+border-radius: 8px;
+font-size: 1rem;
+transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+outline: none;
+border-color: #e71d36;
+}
+
+textarea.form-control {
+min-height: 150px;
+resize: vertical;
+}
+
+.contact-info {
+flex: 1;
+}
+
+.contact-info-item {
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+}
+
+.contact-icon {
+font-size: 1.5rem;
+margin-right: 15px;
+color: #e71d36;
+}
+
+.social-links {
+display: flex;
+gap: 15px;
+margin-top: 40px;
+}
+
+.social-link {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+background: #e71d36;
+color: white;
+border-radius: 50%;
+transition: all 0.3s ease;
+}
+
+.social-link:hover {
+transform: translateY(-5px);
+background: #d10a23;
+}
+
+/* Testimonials Section */
+.testimonials {
+background: #0a1930;
+padding: 100px 0;
+}
+
+.testimonial-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+}
+
+.testimonial-card {
+background: #0d2241;
+padding: 30px;
+border-radius: 15px;
+position: relative;
+}
+
+.testimonial-text {
+margin-bottom: 20px;
+font-style: italic;
+position: relative;
+z-index: 1;
+}
+
+.testimonial-author {
+display: flex;
+align-items: center;
+}
+
+.author-image {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+overflow: hidden;
+margin-right: 15px;
+}
+
+.author-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.author-info h4 {
+font-size: 1.1rem;
+margin-bottom: 5px;
+}
+
+.author-info p {
+color: #aab8c2;
+font-size: 0.9rem;
+}
+
+.quote-icon {
+position: absolute;
+top: 20px;
+right: 20px;
+font-size: 4rem;
+opacity: 0.1;
+color: #e71d36;
+}
+
+/* Gallery Section */
+.gallery {
+background: #0d2241;
+padding: 100px 0;
+}
+
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 15px;
+}
+
+.gallery-item {
+position: relative;
+overflow: hidden;
+border-radius: 10px;
+height: 250px;
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+transform: scale(1.1);
+}
+
+.gallery-overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(10, 25, 48, 0.7);
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+opacity: 1;
+}
+
+.gallery-text {
+color: white;
+text-align: center;
+padding: 0 20px;
+}
+
+/* Footer Section */
+footer {
+background: #06101e;
+color: white;
+padding: 60px 0 30px;
+}
+
+.footer-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 60px;
+margin-bottom: 60px;
+}
+
+.footer-col h4 {
+font-size: 1.2rem;
+margin-bottom: 25px;
+position: relative;
+}
+
+.footer-col h4::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: -10px;
+width: 50px;
+height: 2px;
+background: #e71d36;
+}
+
+.footer-links {
+list-style: none;
+}
+
+.footer-links li {
+margin-bottom: 15px;
+}
+
+.footer-links a {
+color: #aab8c2;
+transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+color: white;
+padding-left: 5px;
+}
+
+.copyright {
+text-align: center;
+padding-top: 30px;
+border-top: 1px solid #1a2a44;
+color: #aab8c2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+.section-title {
+font-size: 2rem;
+}
+
+.hero h1 {
+font-size: 2.8rem;
+}
+
+.about-content {
+flex-direction: column;
+}
+
+.contact-container {
+flex-direction: column;
+}
+}
+
+@media (max-width: 768px) {
+.nav-links {
+display: none;
+}
+
+.hero h1 {
+font-size: 2.3rem;
+}
+
+.hero p {
+font-size: 1.1rem;
+}
+
+.hero-btns {
+flex-direction: column;
+gap: 10px;
+}
+
+.features-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="container">
+<nav>
+<a href="#" class="logo">Protein<span>Beer</span></a>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#" class="btn btn-primary">Shop Now</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+<h1>FIZZ YOUR WAY FIT</h1>
+<p>The world's first high-protein Beer that actually tastes amazing. 20g protein, zero sugar, all energy.</p>
+<div class="hero-btns">
+<a href="#" class="btn btn-primary">Shop Now</a>
+<a href="#about" class="btn btn-secondary">Learn More</a>
+</div>
+<div class="product-image">
+<img src="https://images.pexels.com/photos/4195599/pexels-photo-4195599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Protein Beer Can" style="max-height: 300px; border-radius: 10px;">
+</div>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+<div class="container">
+<h2 class="section-title">Revolutionary Refreshment</h2>
+<p class="section-subtitle">We've reimagined what a Beer can be - creating the perfect fusion of fitness and flavor.</p>
+
+<div class="about-content">
+<div class="about-text">
+<p>Protein Beer was born from a simple question: why can't your favorite refreshment help you reach your fitness goals?</p>
+<p>Our proprietary citrus wheat formula delivers 20g of complete protein in every can, while maintaining that classic Beer taste you love. No compromises, no chalky aftertaste - just pure refreshment that fits your lifestyle.</p>
+<p>Created by fitness enthusiasts for fitness enthusiasts, Protein Beer is the perfect workout companion, recovery drink, or anytime protein boost.</p>
+</div>
+<div class="about-image">
+<img src="https://images.pexels.com/photos/7674494/pexels-photo-7674494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Protein Beer Manufacturing">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+<div class="container">
+<h2 class="section-title">Why Choose Protein Beer?</h2>
+<p class="section-subtitle">More than just a protein drink, more than just a Beer - it's the best of both worlds.</p>
+
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">💪</div>
+<h3>20g Protein</h3>
+<p>Complete protein profile from our proprietary citrus wheat formula, providing all essential amino acids for muscle growth and recovery.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">🚫</div>
+<h3>Zero Sugar</h3>
+<p>Sweetened with natural stevia, our formula delivers the sweetness you crave without the sugar crash afterward.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">⚡</div>
+<h3>Energy Boost</h3>
+<p>Natural caffeine and B-vitamins provide clean, sustained energy without the jitters or crash of energy drinks.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">🔬</div>
+<h3>Scientifically Formulated</h3>
+<p>Developed by sports nutritionists to maximize protein absorption while maintaining the perfect fizzy Beer taste.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">🌱</div>
+<h3>Plant-Based</h3>
+<p>Our citrus wheat protein is 100% plant-based, making Protein Beer suitable for vegetarians and vegans.</p>
+</div>
+
+<div class="feature-card">
+<div class="feature-icon">🥤</div>
+<h3>Real Beer Taste</h3>
+<p>No chalky protein aftertaste - just the refreshing Beer flavor you know and love, with benefits.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery" id="gallery">
+<div class="container">
+<h2 class="section-title">See It In Action</h2>
+<p class="section-subtitle">Fitness enthusiasts love Protein Beer for pre-workout energy, post-workout recovery, and anytime protein.</p>
+
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="https://images.pexels.com/photos/6551136/pexels-photo-6551136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Weightlifter with Protein Beer">
+<div class="gallery-overlay">
+<div class="gallery-text">
+<h3>Pre-Workout Fuel</h3>
+<p>20g protein for maximum performance</p>
+</div>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Runner with Protein Beer">
+<div class="gallery-overlay">
+<div class="gallery-text">
+<h3>Endurance Support</h3>
+<p>Clean energy for the long run</p>
+</div>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.pexels.com/photos/3756042/pexels-photo-3756042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Group Fitness with Protein Beer">
+<div class="gallery-overlay">
+<div class="gallery-text">
+<h3>Team Recovery</h3>
+<p>Perfect for group training sessions</p>
+</div>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.pexels.com/photos/3757941/pexels-photo-3757941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Protein Beer Refreshment">
+<div class="gallery-overlay">
+<div class="gallery-text">
+<h3>Anytime Protein</h3>
+<p>Enjoy the benefits anywhere, anytime</p>
+</div>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.pexels.com/photos/4162452/pexels-photo-4162452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Protein Beer Blue Can">
+<div class="gallery-overlay">
+<div class="gallery-text">
+<h3>Signature Blue Can</h3>
+<p>Our distinctive packaging stands out</p>
+</div>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="https://images.pexels.com/photos/6550839/pexels-photo-6550839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Weightlifter with Protein Beer">
+<div class="gallery-overlay">
+<div class="gallery-text">
+<h3>Strength Support</h3>
+<p>Fuel your strength training</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+<div class="container">
+<h2 class="section-title">What Athletes Say</h2>
+<p class="section-subtitle">Don't just take our word for it - hear from fitness enthusiasts who've made Protein Beer part of their regimen.</p>
+
+<div class="testimonial-grid">
+<div class="testimonial-card">
+<div class="quote-icon">"</div>
+<p class="testimonial-text">I've tried every protein drink on the market, and Protein Beer is the first one that actually tastes good. The fact that it's also a Beer is mind-blowing. It's now my go-to post-workout drink.</p>
+<div class="testimonial-author">
+<div class="author-image">
+<img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sarah J.">
+</div>
+<div class="author-info">
+<h4>Sarah J.</h4>
+<p>Powerlifter</p>
+</div>
+</div>
+</div>
+
+<div class="testimonial-card">
+<div class="quote-icon">"</div>
+<p class="testimonial-text">As a long-distance runner, I need something that provides protein without feeling heavy. Protein Beer is perfect - it's refreshing, gives me the protein I need, and the caffeine is an added bonus during training.</p>
+<div class="testimonial-author">
+<div class="author-image">
+<img src="https://images.pexels.com/photos/6551173/pexels-photo-6551173.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mike T.">
+</div>
+<div class="author-info">
+<h4>Mike T.</h4>
+<p>Marathon Runner</p>
+</div>
+</div>
+</div>
+
+<div class="testimonial-card">
+<div class="quote-icon">"</div>
+<p class="testimonial-text">I used to hate protein drinks because of the taste. Protein Beer changed everything for me. I actually look forward to drinking it after my workouts, and I've seen real improvements in my recovery time.</p>
+<div class="testimonial-author">
+<div class="author-image">
+<img src="https://images.pexels.com/photos/3757946/pexels-photo-3757946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Alex K.">
+</div>
+<div class="author-info">
+<h4>Alex K.</h4>
+<p>CrossFit Coach</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+<div class="container">
+<h2 class="section-title">Get In Touch</h2>
+<p class="section-subtitle">Have questions about Protein Beer? We'd love to hear from you!</p>
+
+<div class="contact-container">
+<form class="contact-form">
+<div class="form-group">
+<label for="name">Name</label>
+<input type="text" id="name" class="form-control" required>
+</div>
+
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" class="form-control" required>
+</div>
+
+<div class="form-group">
+<label for="subject">Subject</label>
+<input type="text" id="subject" class="form-control" required>
+</div>
+
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" class="form-control" required></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+
+<div class="contact-info">
+<div class="contact-info-item">
+<div class="contact-icon">📧</div>
+<div>
+<h3>Email Us</h3>
+<p>info@proteinBeer.com</p>
+</div>
+</div>
+
+<div class="contact-info-item">
+<div class="contact-icon">📱</div>
+<div>
+<h3>Call Us</h3>
+<p>+1 (555) 123-4567</p>
+</div>
+</div>
+
+<div class="contact-info-item">
+<div class="contact-icon">🏢</div>
+<div>
+<h3>Visit Us</h3>
+<p>123 Fitness Avenue<br>Protein City, PC 12345<br>United States</p>
+</div>
+</div>
+
+<h3>Follow Us</h3>
+<div class="social-links">
+<a href="#" class="social-link">f</a>
+<a href="#" class="social-link">t</a>
+<a href="#" class="social-link">in</a>
+<a href="#" class="social-link">ig</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-container">
+<div class="footer-col">
+<h4>Protein Beer</h4>
+<p>Revolutionizing refreshment with the world's first high-protein Beer. Made for fitness enthusiasts by fitness enthusiasts.</p>
+</div>
+
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul class="footer-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Shop</h4>
+<ul class="footer-links">
+<li><a href="#">Single Can</a></li>
+<li><a href="#">6-Pack</a></li>
+<li><a href="#">24-Pack</a></li>
+<li><a href="#">Subscription</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Legal</h4>
+<ul class="footer-links">
